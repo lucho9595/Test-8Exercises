@@ -1,0 +1,23 @@
+{
+    "fire": "fire",
+    "water": "water",
+    "grass": "grass",
+    "bug": "bug",
+    "dark": "dark",
+    "dragon": "dragon",
+    "electric": "electric",
+    "fairy": "fairy",
+    "fighting": "fighting",
+    "flying": "flying",
+    "ghost": "ghost",
+    "ground": "ground",
+    "ice": "ice",
+    "normal": "normal",
+    "poison": "poison",
+    "psychic": "psychic",
+    "rock": "rock",
+    "steel": "steel",
+    "unknown": "unknown",
+    "shadow": "shadow"
+  }
+  

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ejercicio 5</title>
+  
+  <!-- Incluimos la biblioteca de Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="d-flex align-items-center justify-content-center vh-100">
+  <div class="container">
+    <h2 class="text-center mb-4">Validación de contraseña</h2>
+
+    <form name="contraseña" oninput="validarPassword(document.contraseña.password.value)">
+      <div class="form-group">
+        <label for="password">Validar Contraseña</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          placeholder="Ingresa tu Password"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Validar</button>
+    </form>
+
+    <ul id="password-conditions" class="mt-4">
+      <li class="invalid">Debe tener al menos 16 caracteres</li>
+      <li class="invalid">Debe tener letras minúsculas y mayúsculas</li>
+      <li class="invalid">No puede tener 2 letras iguales consecutivas</li>
+      <li class="invalid">Debe contener al menos 4 números y no puede tener 2 números iguales consecutivos</li>
+      <li class="invalid">Debe tener al menos 2 caracteres especiales</li>
+      <li class="invalid">No puede contener el número 0</li>
+      <li class="invalid">No puede contener espacios</li>
+    </ul>
+  </div>
+
+  <script type="text/javascript" src="./app.js"></script>
+</body>
+</html>

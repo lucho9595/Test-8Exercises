@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  #password-conditions {
+    list-style-type: none;
+    margin-top: 20px;
+  }
+  
+  .invalid:before {
+    content: '\2718 '; /* X symbol */
+    color: red;
+  }
+  
+  .valid:before {
+    content: '\2713 '; /* Checkmark symbol */
+    color: green;
+  }
+  
