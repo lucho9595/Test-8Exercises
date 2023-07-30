@@ -22,6 +22,8 @@ Este es un proyecto que implementa un formulario de tareas con la capacidad de a
 # Instrucciones de uso
 
 1. Clona este repositorio en tu máquina local.
+ - git clone https://github.com/lucho9595/Test-8Exercises
+ - Ingresa a la carpeta del proyecto (Seria Ejercicio7)
 2. Abre el archivo index.html en tu navegador web.
 3. Completa el formulario para agregar una nueva tarea. Los campos "Nombre de la tarea", "Fecha", "Prioridad" y "Descripción" son obligatorios.
 4. Haz clic en el botón "Agregar tarea" para agregar la tarea al final de la tabla.

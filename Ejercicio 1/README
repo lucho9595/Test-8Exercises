@@ -5,6 +5,8 @@ Esta es una calculadora de multiplicación desarrollada en JavaScript que permit
 ## Cómo usar la calculadora
 
 1. Clona este repositorio en tu máquina local o descarga los archivos como un archivo ZIP.
+ - git clone https://github.com/lucho9595/Test-8Exercises
+ - Ingresa a la carpeta del proyecto (Seria Ejercicio1)
 
 2. Abre el archivo `index.html` en tu navegador. Esto mostrará la interfaz de la calculadora.
 
