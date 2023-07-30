@@ -1,48 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario de Tareas</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
     <div class="container">
-        <h1>Formulario de Tareas</h1>
-        <form id="taskForm">
-            <label for="taskName">Nombre de la tarea:</label>
-            <input type="text" id="taskName" required>
+      <h1 class="mt-4 mb-4">Formulario de Tareas</h1>
+      <form id="taskForm">
+        <div class="form-group">
+          <label for="taskName">Nombre de la tarea:</label>
+          <input type="text" id="taskName" class="form-control" required />
+        </div>
 
-            <label for="taskDate">Fecha:</label>
-            <input type="date" id="taskDate" required>
+        <div class="form-group">
+          <label for="taskDate">Fecha:</label>
+          <input type="date" id="taskDate" class="form-control" required />
+        </div>
 
-            <label for="taskPriority">Prioridad:</label>
-            <select id="taskPriority" required>
-                <option value="alta">Alta</option>
-                <option value="media">Media</option>
-                <option value="baja">Baja</option>
-            </select>
+        <div class="form-group">
+          <label for="taskPriority">Prioridad:</label>
+          <select id="taskPriority" class="form-control" required>
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+          </select>
+        </div>
 
-            <label for="taskDescription">Descripción:</label>
-            <textarea id="taskDescription" required></textarea>
+        <div class="form-group">
+          <label for="taskDescription">Descripción:</label>
+          <textarea
+            id="taskDescription"
+            class="form-control"
+            required
+          ></textarea>
+        </div>
 
-            <button type="submit">Agregar tarea</button>
-            <button type="button" id="clearButton">Limpiar formulario</button>
-        </form>
+        <button type="submit" class="btn btn-primary">Agregar tarea</button>
+        <button type="button" id="clearButton" class="btn btn-secondary">
+          Limpiar formulario
+        </button>
+      </form>
 
-        <table id="taskTable">
-            <thead>
-                <tr>
-                    <th>Nombre de la tarea</th>
-                    <th>Fecha</th>
-                    <th>Prioridad</th>
-                    <th>Descripción</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+      <table id="taskTable" class="table mt-4">
+        <thead class="thead-light">
+          <tr>
+            <th>Nombre de la tarea</th>
+            <th>Fecha</th>
+            <th>Prioridad</th>
+            <th>Descripción</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </div>
+
     <script src="app.js"></script>
-</body>
+    <!-- Asegúrate de incluir jQuery antes que el archivo JavaScript de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>

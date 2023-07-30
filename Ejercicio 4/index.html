@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Calculadora de numeros</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora de números</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body>
-  <h1>Calculadora de números</h1>
-  <p>Ingresa los números separados por comas:</p>
-  <input type="text" id="inputNumeros" placeholder="Ejemplo: 10, 30, 50, 2000, 1500, 800, 1200">
-  <button onclick="calcularInformacion()">Calcular</button>
-  <button onclick="limpiarResultados()">Limpiar</button>
-  <div id="resultados"></div>
-  <h2>Números ingresados por el usuario:</h2>
-  <div id="numerosIngresados"></div>
+<body class="container pt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h1 class="text-center mb-4">Calculadora de números</h1>
+      <p class="text-center">Ingresa los números separados por comas:</p>
+      <div class="input-group mb-2">
+        <input type="text" class="form-control" id="inputNumeros" placeholder="Ejemplo: 10, 30, 50, 2000, 1500, 800, 1200">
+        <button class="btn btn-primary" onclick="calcularInformacion()">Calcular</button>
+        <button class="btn btn-secondary" onclick="limpiarResultados()">Limpiar</button>
+      </div>
+      <div class="mt-4" id="resultados"></div>
+      <h2 class="mt-4">Números ingresados por el usuario:</h2>
+      <div id="numerosIngresados"></div>
+    </div>
+  </div>
 
+  <!-- Agregar enlaces a los archivos JavaScript de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Z7IkGCnMW9s9MSLvSHs6TaK2YxA7n0l9i4VRbz7NIaTxvbNimTZ2OgPv6GdPEIVC" crossorigin="anonymous"></script>
   <script src="app.js"></script>
 </body>
 </html>

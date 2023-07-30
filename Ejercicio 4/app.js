@@ -1,28 +1,35 @@
 function calcularInformacion() {
-    const inputNumeros = document.getElementById('inputNumeros');
-    const arregloNumeros = inputNumeros.value.split(',').map(num => Number(num.trim()));
+  const inputNumeros = document.getElementById('inputNumeros');
+  const inputText = inputNumeros.value.trim();
 
-    const cantidadElementos = arregloNumeros.length;
-  
-    // Cálculo del porcentaje de números pares e impares.
-    const numerosPares = arregloNumeros.filter(num => num % 2 === 0);
-    const porcentajePares = (numerosPares.length / cantidadElementos) * 100;
-    const porcentajeImpares = 100 - porcentajePares;
-  
-    // Cálculo del porcentaje de números mayores a 1000.
-    const numerosMayores1000 = arregloNumeros.filter(num => num > 1000);
-    const porcentajeMayores1000 = (numerosMayores1000.length / cantidadElementos) * 100;
-  
-    // Cálculo del mayor y menor valor.
-    const mayorValor = Math.max(...arregloNumeros);
-    const menorValor = Math.min(...arregloNumeros);
-  
-    // Cálculo del porcentaje del número mínimo y el promedio de todos los números.
-    const porcentajeNumeroMinimo = (menorValor / mayorValor) * 100;
-    const sumaTotal = arregloNumeros.reduce((acc, num) => acc + num, 0);
-    const promedioNumeros = sumaTotal / cantidadElementos;
-  
-const resultadosDiv = document.getElementById('resultados');
+  // Validar si el input está vacío o solo contiene letras/caracteres no numéricos
+  if (inputText === '' || !/^\d+(,\s*\d+)*$/.test(inputText)) {
+    alert('Por favor, ingresa solo números separados por comas.');
+    return;
+  }
+
+  const arregloNumeros = inputText.split(',').map(num => Number(num.trim()));
+  const cantidadElementos = arregloNumeros.length;
+
+  // Cálculo del porcentaje de números pares e impares.
+  const numerosPares = arregloNumeros.filter(num => num % 2 === 0);
+  const porcentajePares = (numerosPares.length / cantidadElementos) * 100;
+  const porcentajeImpares = 100 - porcentajePares;
+
+  // Cálculo del porcentaje de números mayores a 1000.
+  const numerosMayores1000 = arregloNumeros.filter(num => num > 1000);
+  const porcentajeMayores1000 = (numerosMayores1000.length / cantidadElementos) * 100;
+
+  // Cálculo del mayor y menor valor.
+  const mayorValor = Math.max(...arregloNumeros);
+  const menorValor = Math.min(...arregloNumeros);
+
+  // Cálculo del porcentaje del número mínimo y el promedio de todos los números.
+  const porcentajeNumeroMinimo = (menorValor / mayorValor) * 100;
+  const sumaTotal = arregloNumeros.reduce((acc, num) => acc + num, 0);
+  const promedioNumeros = sumaTotal / cantidadElementos;
+
+  const resultadosDiv = document.getElementById('resultados');
   resultadosDiv.innerHTML = `
     <p>Cantidad de elementos: ${cantidadElementos}</p>
     <p>Porcentaje de números pares: ${porcentajePares.toFixed(2)}%</p>

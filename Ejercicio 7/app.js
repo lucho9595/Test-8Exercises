@@ -9,8 +9,8 @@ function addTaskToTable(task) {
         <td>${task.priority}</td>
         <td>${task.description}</td>
         <td class="actions">
-            <button onclick="editTask(this)">Editar</button>
-            <button onclick="deleteTask(this)">Borrar</button>
+            <button onclick="editTask(this)" type="button" class="btn btn-sm btn-info">Editar</button>
+            <button onclick="deleteTask(this)" type="button" class="btn btn-sm btn-danger">Borrar</button>
         </td>
     `;
 

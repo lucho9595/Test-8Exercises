@@ -4,29 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ejercicio 3</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body>
-  <h2>Validacion de contraseña</h2>
+<body class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2 class="text-center mb-4">Validacion de contraseña</h2>
 
-  <form name="contraseña" onsubmit="validarPassword(document.contraseña.password.value)">
-    <div>
-      <label for="password">Validar Contraseña</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        placeholder="Ingresa tu Password"
-      />
+      <form name="contraseña" onsubmit="validarPassword(document.contraseña.password.value)">
+        <div class="mb-3">
+          <label for="password" class="form-label">Validar Contraseña</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Ingresa tu Password">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Validar</button>
+      </form>
     </div>
+  </div>
 
-    <button
-      type="submit"
-      name="submit"
-    >
-      Validar
-    </button>
-  </form>
-
-  <script type="text/javascript" src="./app.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
